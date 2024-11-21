@@ -1,0 +1,181 @@
+   :root{
+    color:#7cfc00 ;
+
+   }
+   *{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+} 
+
+section{
+   padding: 2rem 9%;
+}
+header{
+    position: fixed;
+    top: 0; left:0; right: 0;
+    background: #fff;
+    padding: 2rem 9%;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+ header .logo{
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bolder;
+ }
+
+ header .navbar a{
+    font-size: 2rem;
+    padding:0 1.5rem;
+    color: #666;
+ }
+
+ header .navbar a:hover{
+    color:var(--lawngreen);
+ }
+  
+
+
+ header .search-container input{
+    width: 350px;
+    font-size: 2rem;
+    padding:3px 10px;
+    border-radius: 10px;
+    border:none;
+    box-shadow: 0px 2px 5px rgba(0,0,0,.2);
+    transition: 0.4s ease-in-out;
+ }
+
+  
+       
+ header .icons a{
+    font-size: 2.5rem;
+    color:#333;
+    margin-left: 1.5rem;
+    right: 10px;
+ }
+  
+ header .icons a:hover{
+    color:var(--lawngreen);
+ }
+
+ header #toggler{
+   display: none;
+
+ }
+ header .fa-bars{
+font-size: 2.5rem;
+color:#333;
+border-radius: .5rem;
+padding: .5rem 1.5rem;
+cursor:pointer;
+border:.06rem solid rgba(0,0,0,.3);
+display: none;
+ }
+.home{
+   display: flex;
+   align-items: center;
+   min-height: 100vh;
+   background:url(gardener.jpg) no-repeat;
+   background-size: cover;
+   background-position: center;
+
+}
+.home .content h4{
+   font-size: 6rem;
+   color:#090909;
+}
+
+.home .content span{
+   font-size: 3.2rem;
+   color:var(--lawngreen);
+   padding: 1rem 0;
+   line-height: 1.5;
+}
+
+
+.btn{
+   display: inline-block;
+   margin-top: 1rem;
+   border-radius: 5rem;
+   background: #333;
+   color: #fff;
+   padding: .9rem 3.5rem;
+   cursor: pointer;
+   font-size: 1.7rem;
+}
+.btn:hover{
+   background: #7cfc00;
+}
+
+@media (max-width:991px) {
+
+   html{
+      font-size: 55%;
+      
+  } 
+  header{
+   padding: 2rem;
+  }
+  section{
+   padding: 2rem;
+  }
+  .home{
+   background-position: left;
+  }
+}
+
+@media (max-width:768px){
+
+   header .fa-bars{
+      display: block;
+   }
+   header .navbar{
+      position:absolute;
+      top:100%; left:0; right: 0;
+      background: #eee;
+      border-top: .1rem solid rgba(0,0,0,.1);
+      clip-path: polygon(0 0,100% 0, 100% 0,0 0);
+   }
+   header #toggler:checked~ .navbar{
+      clip-path: polygon(0 0,100% 0,100% 100%,0% 100%);
+   }
+   header .navbar a{
+      margin:1.5rem;
+      padding: 1.5rem;
+      background: #fff;
+      border: .1rem solid rgba(0,0,0,.1);
+      display: block;
+   }
+   .home .content h3{
+      font-size: 5rem;
+   }
+   .home .content span{
+      font-size: 2.5rem;
+   }
+   
+}
+@media (max-width:450px) {
+
+   html{
+      font-size: 50%;
+      
+  } 
+  
+}
+
